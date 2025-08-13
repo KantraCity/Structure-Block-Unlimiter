@@ -1,4 +1,4 @@
-# Architect's Vision (Structure Block Unlimiter)
+# Structure Block Unlimiter
 
 [![Версия Minecraft](https://img.shields.io/badge/Minecraft-1.21.1-green.svg?style=for-the-badge)](https://www.minecraft.net)
 [![Modloader](https://img.shields.io/badge/Modloader-NeoForge-blue.svg?style=for-the-badge)](https://neoforged.net/)
