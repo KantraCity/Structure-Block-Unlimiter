@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.github.KantraCity.structure_block_unlimiter.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "StructureBlockEntityMixin",
+    "StructureBlockEditScreenMixin",
+    "StructureBlockRendererMixin"
+  ],
+  "client": [],
+  "server": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
