@@ -68,7 +68,7 @@ The keybind can be changed in the standard Minecraft controls menu, under the ca
 This mod is required on both the server and all connecting clients.
 
 1.  Make sure you have [NeoForge](https://neoforged.net/) installed.
-2.  Download the latest `.jar` file from the [Releases](https://github.com/your-username/your-repo/releases) page.
+2.  Download the latest `.jar` file from the [Releases](https://github.com/KantraCity/Structure-Block-Unlimiter/releases) page.
 3.  Place the `.jar` file into your `mods` folder (and the server's `mods` folder if applicable).
 4.  Restart the game/server.
 
