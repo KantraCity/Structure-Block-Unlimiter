@@ -28,7 +28,6 @@ Have you ever tried to save your megastructure, sprawling city, or complex redst
 #### Increased Bounding Box Render Distance
 *See your entire project outline from afar.*
 
-`[МЕСТО ДЛЯ СКРИНШОТА: Игрок стоит на большом расстоянии, но сетка от структурного блока все еще видна вокруг огромного строения]`
 ![Screenshot of increased render distance](https://imgur.com/1opRaX6)
 
 <br>
@@ -36,7 +35,6 @@ Have you ever tried to save your megastructure, sprawling city, or complex redst
 #### New "Re-open Last" Keybind
 *Instantly access the Structure Block GUI from anywhere.*
 
-`[МЕСТО ДЛЯ СКРИНШОТА: Анимация (GIF) или два скриншота. 1) Игрок находится далеко от структурного блока. 2) Игрок нажимает клавишу, и GUI структурного блока открывается]`
 ![Screenshot of keybind usage 1](https://imgur.com/IOSaLsY)
 ![Screenshot of keybind usage 2](https://imgur.com/W2O0ATj)
 
