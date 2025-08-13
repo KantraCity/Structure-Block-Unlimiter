@@ -28,15 +28,15 @@ Have you ever tried to save your megastructure, sprawling city, or complex redst
 #### Increased Bounding Box Render Distance
 *See your entire project outline from afar.*
 
-![Screenshot of increased render distance](https://imgur.com/1opRaX6)
+![Screenshot of increased render distance](https://imgur.com/1opRaX6.png)
 
 <br>
 
 #### New "Re-open Last" Keybind
 *Instantly access the Structure Block GUI from anywhere.*
 
-![Screenshot of keybind usage 1](https://imgur.com/IOSaLsY)
-![Screenshot of keybind usage 2](https://imgur.com/W2O0ATj)
+![Screenshot of keybind usage 1](https://imgur.com/IOSaLsY.png)
+![Screenshot of keybind usage 2](https://imgur.com/W2O0ATj.png)
 
 ---
 
