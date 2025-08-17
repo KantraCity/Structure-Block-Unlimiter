@@ -10,17 +10,21 @@ A simple, quality-of-life mod that removes the vanilla restrictions on Minecraft
 
 ## Features
 
-Have you ever tried to save your megastructure, sprawling city, or complex redstone contraption, only to be stopped by the frustrating **48x48x48 block limit**? Architect's Vision fixes that and adds more.
+Have you ever tried to save your megastructure, sprawling city, or complex redstone contraption, only to be stopped by the frustrating **48x48x48 block limit**? This mod fixes that and adds powerful new tools for on-the-fly manipulation.
 
--   ✅ **Fully Configurable Size Limit:** The maximum size of a structure you can save or load is increased from a tiny `48x48x48` to a massive **`512x512x512`** blocks by default. You can change this limit in the config file to whatever your machine can handle!
+-   ✅ **Fully Configurable Size Limit:** The maximum size of a structure is increased from a tiny `48x48x48` to a massive **`512x512x512`** blocks by default. You can change this limit in the config file to whatever your machine can handle!
 
 -   ✅ **Extended Render Distance:** The structure's bounding box is now visible from much further away, increased from `96` to **`256`** blocks by default (also configurable). No more running back and forth to see if your alignment is correct.
 
--   ✅ **"Re-open Last" Keybind:** A new configurable keybind (default: `G`) allows you to instantly re-open the GUI of the last Structure Block you interacted with, no matter where you are in the world. A huge time-saver for large projects!
+-   ✅ **"Re-open Last" Keybind:** A configurable keybind (default: `G`) allows you to instantly re-open the GUI of the last Structure Block you interacted with, no matter where you are in the world. A huge time-saver!
+
+-   ✅ **Dynamic Grid Resizing (New!):** Intuitively resize the structure area without opening the GUI! Simply look at a face of the bounding box and use the new keybinds (default: `Up/Down Arrows`) to push it away or pull it closer. It works from both inside and outside the box.
+
+-   ✅ **Dynamic Grid Shifting (New!):** Nudge the entire structure area one block at a time. A new keybind (default: `V`) moves the bounding box in the direction you are looking, allowing for precise, quick positioning.
 
 -   ✅ **Client + Server:** This mod is required on both the client and the server to enable all features.
 
--   ✅ **Lightweight & Vanilla-Friendly:** No new blocks, no new items. Just three essential tweaks to a vanilla feature that make it infinitely more powerful.
+-   ✅ **Lightweight & Vanilla-Friendly:** No new blocks, no new items. Just powerful tweaks to a vanilla feature that make it infinitely more useful.
 
 ---
 ## How It Looks

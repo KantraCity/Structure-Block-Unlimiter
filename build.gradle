@@ -6,6 +6,12 @@ plugins {
     id 'org.jetbrains.kotlin.jvm'
 }
 
+def supportedVersions = ["1.21"] + (1..8).collect { "1.21.${it}" }
+def mcVersionProp = project.findProperty('mcVersion') ?: supportedVersions.last()
+// Переопределяем minecraft_version из gradle.properties
+project.ext.minecraft_version = mcVersionProp
+println ">>> Configuring for Minecraft version: ${project.minecraft_version}"
+
 version = mod_version
 group = mod_group_id
 
@@ -96,7 +102,6 @@ sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
     // Example mod dependency with JEI
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime
     // compileOnly "mezz.jei:jei-${mc_version}-common-api:${jei_version}"
@@ -166,6 +171,30 @@ idea {
         downloadJavadoc = true
     }
 }
-kotlin {
-    jvmToolchain(21)
+
+tasks.named('jar', Jar).configure {
+    // Добавляем классификатор к имени файла, чтобы они не перезаписывались
+    archiveClassifier.set(project.minecraft_version)
+}
+
+supportedVersions.each { ver ->
+    task "buildFor_${ver.replace('.', '_')}"(type: Exec) {
+        group = "Build All Versions"
+        description = "Builds the mod for Minecraft ${ver}"
+
+        if (System.getProperty("os.name").toLowerCase().contains("windows")) {
+            commandLine 'cmd', '/c', "gradlew.bat build -PmcVersion=${ver}"
+        } else {
+            commandLine './gradlew', 'build', "-PmcVersion=${ver}"
+        }
+    }
+}
+
+task buildAll(group: "Build All Versions") {
+    description = "Builds JARs for all supported Minecraft versions."
+    dependsOn tasks.matching { it.name.startsWith('buildFor_') }
+    doLast {
+        println "\n>>> All versions have been built successfully!"
+        println ">>> JAR files are located in build/libs/"
+    }
 }

@@ -1,5 +1,6 @@
 package com.github.KantraCity.structure_block_unlimiter.net;
 
+import com.github.KantraCity.structure_block_unlimiter.Structure_block_unlimiter;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Vec3i;
 import net.minecraft.network.FriendlyByteBuf;
@@ -33,7 +34,7 @@ public record CustomSetStructureBlockPacket(
         long seed
 ) implements CustomPacketPayload {
 
-    public static final Type<CustomSetStructureBlockPacket> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath("osc", "set_structure_block"));
+    public static final Type<CustomSetStructureBlockPacket> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(Structure_block_unlimiter.MODID, "set_structure_block"));
 
     @Override
     public Type<? extends CustomPacketPayload> type() {

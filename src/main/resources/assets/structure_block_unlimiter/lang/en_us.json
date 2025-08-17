@@ -1,4 +1,7 @@
 {
   "key.structure_block_unlimiter.open_last_structure_block": "Open Last Structure Block",
-  "key.categories.structure_block_unlimiter": "Structure Block Unlimiter"
+  "key.categories.structure_block_unlimiter": "Structure Block Unlimiter",
+  "key.structure_block_unlimiter.increase_grid": "Increase Grid",
+  "key.structure_block_unlimiter.decrease_grid": "Decrease Grid",
+  "key.structure_block_unlimiter.shift_grid_forward": "Shift Grid"
 }

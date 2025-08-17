@@ -23,6 +23,18 @@ public class Network {
                 RequestStructureBlockGUIPacket::handle
         );
 
+        registrar.playToServer(
+                ResizeStructureBlockPacket.TYPE,
+                ResizeStructureBlockPacket.STREAM_CODEC,
+                ResizeStructureBlockPacket::handle
+        );
+
+        registrar.playToServer(
+                ShiftStructureBlockPacket.TYPE,
+                ShiftStructureBlockPacket.STREAM_CODEC,
+                ShiftStructureBlockPacket::handle
+        );
+
         if (FMLEnvironment.dist == Dist.CLIENT) {
             registrar.playToClient(
                     OpenStructureBlockGUIPacket.TYPE,

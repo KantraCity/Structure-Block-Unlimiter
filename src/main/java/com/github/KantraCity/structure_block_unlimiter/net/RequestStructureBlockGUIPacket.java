@@ -1,5 +1,6 @@
 package com.github.KantraCity.structure_block_unlimiter.net;
 
+import com.github.KantraCity.structure_block_unlimiter.Structure_block_unlimiter;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.codec.StreamCodec;
@@ -10,9 +11,10 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.StructureBlockEntity;
 import net.neoforged.neoforge.network.PacketDistributor;
 import net.neoforged.neoforge.network.handling.IPayloadContext;
+import org.jetbrains.annotations.NotNull;
 
 public record RequestStructureBlockGUIPacket(BlockPos pos) implements CustomPacketPayload {
-    public static final Type<RequestStructureBlockGUIPacket> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath("osc", "req_structure_block_gui"));
+    public static final Type<RequestStructureBlockGUIPacket> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(Structure_block_unlimiter.MODID, "req_structure_block_gui"));
     public static final StreamCodec<FriendlyByteBuf, RequestStructureBlockGUIPacket> STREAM_CODEC = StreamCodec.of(
             RequestStructureBlockGUIPacket::write, RequestStructureBlockGUIPacket::read);
 
@@ -27,7 +29,6 @@ public record RequestStructureBlockGUIPacket(BlockPos pos) implements CustomPack
     public static void handle(final RequestStructureBlockGUIPacket packet, final IPayloadContext context) {
         context.enqueueWork(() -> {
             ServerPlayer player = (ServerPlayer) context.player();
-            if (player == null) return;
 
             BlockPos pos = packet.pos();
                 BlockEntity be = player.level().getBlockEntity(pos);
@@ -38,7 +39,7 @@ public record RequestStructureBlockGUIPacket(BlockPos pos) implements CustomPack
     }
 
     @Override
-    public Type<? extends CustomPacketPayload> type() {
+    public @NotNull Type<? extends CustomPacketPayload> type() {
         return TYPE;
     }
 }
